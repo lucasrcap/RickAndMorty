@@ -1,0 +1,26 @@
+<div class="seasons-container">
+  <div class="season" *ngFor="let season of seasons">
+    <h2>Season: {{ season.number }}</h2>
+    <table class="table table-dark table-striped table-hover episodes-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Episode</th>
+          <th>Air Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let episode of season.episodes"
+          (click)="goToEpisode(episode)"
+        >
+          <td>{{ episode.episode | episode }}</td>
+          <td>
+            {{ episode.name }}
+          </td>
+          <td>{{ episode.air_date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

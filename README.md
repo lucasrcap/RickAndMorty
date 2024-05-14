@@ -1,27 +1,51 @@
-# RickAndMortyAPI
+** Projeto Rick and Morty **
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
-## Development server
+** Introdução **
+O projeto Rick and Morty SPA é uma Single Page Application desenvolvida utilizando a API Rick and Morty para o consumo de dados.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+** Autenticação **
+Foi criada uma tela simples de login, com o e-mail e senha necessários já inseridos no formulário para facilitar o acesso, além de existir um sistema de validação para ambos.
 
-## Code scaffolding
+** Credenciais de Acesso **
+- **Email:** desafiorickandmorty@des.com
+- **Senha:** 123
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+** Layout **
+O layout da aplicação possui a tela de personagens, localizações e episódios, possui também uma header com todas as telas previamente mencionadas e também a home, essa header é fixa em todas as páginas do programa para uma melhor navegação.
 
-## Build
+** Funcionalidades **
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+** Listagem e Detalhes **
+A aplicação possui uma página de listagem que exibe os personagens da série. Ao clicar em um dos itens da listagem, o usuário é direcionado para a página de detalhes, onde pode obter informações mais específicas sobre o personagem escolhido.
 
-## Running unit tests
+** Paginação **
+Foi implementada uma funcionalidade de paginação para os elementos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+** Barra de Busca **
+A barra de busca é uma funcionalidade global na aplicação, sendo exibida apenas nas páginas de listagem. Essa barra permite ao usuário filtrar a listagem ativa, proporcionando uma forma rápida de encontrar personagens específicos.
 
-## Running end-to-end tests
+** Como Executar o Projeto **
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+** Pré-requisitos **
+Ter o Angular CLI instalado em sua máquina. Caso ainda não tenha, instalá-lo globalmente utilizando o seguinte comando:
 
-## Further help
+```
+npm install -g @angular/cli
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+** Atualizar as Dependências **
+No diretório raiz do projeto, executar o seguinte comando para obter todas as dependências necessárias:
+
+```
+npm install
+```
+
+** Executar o Projeto **
+Com as dependências atualizadas, executar o aplicativo usando o seguinte comando:
+
+```
+ng serve
+```
+
+O aplicativo será compilado e estará disponível em http://localhost:4200/.

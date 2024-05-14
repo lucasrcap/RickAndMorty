@@ -1,0 +1,14 @@
+<app-header></app-header>
+<app-cover></app-cover>
+<div
+  class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3"
+  style="flex-wrap: wrap"
+>
+  <app-title
+    *ngFor="let item of items; let i = index"
+    [title]="item.title"
+    [dark]="i % 2 == 0"
+    [imageUrl]="item.imageUrl"
+    [linkTo]="item.linkTo"
+  ></app-title>
+</div>

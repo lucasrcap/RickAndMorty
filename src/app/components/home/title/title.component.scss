@@ -1,0 +1,17 @@
+.menu-image {
+  background-position: center;
+  background-size: cover;
+  width: 80%;
+  height: 300px;
+  border-radius: 21px 21px 0 0;
+}
+
+.tile {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.tile:hover {
+  transform: scale(1.04);
+  position: relative;
+}

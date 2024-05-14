@@ -1,0 +1,35 @@
+
+<div class="character">
+  <div class="image-container">
+    <a routerLink="/characters/{{ character.id }}">
+      <img
+        class="character-image"
+        [src]="character.image"
+        [alt]="character.name"
+      />
+    </a>
+  </div>
+  <div class="character-card">
+    <div class="section">
+      <a routerLink="/characters/{{ character.id }}">
+        <h2>{{ character.name }}</h2>
+      </a>
+      <span class="status">
+        <span class="{{ character.status | lowercase }}"></span>
+        {{ character.status }} - {{ character.species }}
+      </span>
+    </div>
+    <div class="section">
+      <span class="text-gray">Last known location:</span>
+      <a routerLink="/locations/{{ character.location.url | urlToId }}">
+        {{ character.location.name }}
+      </a>
+    </div>
+    <div class="section">
+      <span class="text-gray">First seen in:</span>
+      <a routerLink="/episodes/{{ firstEpisode?.id }}">
+        {{ firstEpisode?.name }}
+      </a>
+    </div>
+  </div>
+</div>

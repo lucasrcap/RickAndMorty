@@ -1,0 +1,14 @@
+<div
+  class="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden tile"
+  [ngClass]="{ 'bg-dark text-white': dark, 'bg-light': !dark }"
+  style="min-width: 400px"
+  (click)="navigate()"
+>
+  <div class="my-3 py-3">
+    <h2 class="display-5">{{ title }}</h2>
+  </div>
+  <div
+    class="bg-light shadow-sm mx-auto menu-image"
+    style="background-image: url('{{ imageUrl }}')"
+  ></div>
+</div>

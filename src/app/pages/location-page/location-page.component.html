@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="location-container" *ngIf="!loading">
+  <app-location [location]="location"></app-location>
+
+  <div class="residents">
+    <h2>Residents</h2>
+    <div class="characters-container">
+      <app-character class="char-info"
+        *ngFor="let character of characters"
+        [character]="character"
+      ></app-character>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="search-container">
+  <input
+    type="text"
+    class="form-control-lg"
+    placeholder="Search..."
+    [(ngModel)]="term"
+    (ngModelChange)="this.searchUpdate.next($event)"
+  />
+</div>
+
+<app-loading [loading]="loading"></app-loading>
+
+<app-notfound [visible]="notFound"></app-notfound>
+
+<div class="seasons-container">
+  <div class="season" *ngFor="let season of seasons">
+    <h2>Season: {{ season.number }}</h2>
+    <table class="table table-dark table-striped table-hover episodes-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Episode</th>
+          <th>Air Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let episode of season.episodes"
+          (click)="goToEpisode(episode)"
+        >
+          <td>{{ episode.episode | episode }}</td>
+          <td>
+            {{ episode.name }}
+          </td>
+          <td>{{ episode.air_date }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

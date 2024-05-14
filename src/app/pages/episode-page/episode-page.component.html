@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="episode-container">
+  <h1 class="ep-name">Episode Name: {{ episode.name }}</h1>
+  <div class="episode">
+    Season {{ episode.episode | season }} Episode
+    {{ episode.episode | episode }}
+  </div>
+  <div class="air-date">Air Date: {{ episode.air_date | date }}</div>
+
+  <div class="characters">
+    <h2>Characters</h2>
+    <div class="characters-container">
+      <app-character
+        *ngFor="let character of characters"
+        [character]="character"
+      ></app-character>
+    </div>
+  </div>
+</div>

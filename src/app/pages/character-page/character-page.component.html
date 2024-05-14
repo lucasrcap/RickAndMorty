@@ -1,0 +1,39 @@
+<app-header></app-header>
+<app-loading [loading]="loading"></app-loading>
+
+<div class="character-container" *ngIf="!loading">
+  <div class="image-container">
+    <img [src]="character?.image" />
+  </div>
+  <div class="character-info">
+    <h1>{{ character?.name }}</h1>
+    <div class="section">
+      <span class="status">
+        <span class="{{ character?.status | lowercase }}"></span>
+        {{ character?.status }} - {{ character?.species }}
+      </span>
+    </div>
+    <div class="section">
+      <span class="gender" *ngIf="character?.gender">
+        Gender: {{ character?.gender }}
+      </span>
+    </div>
+    <div class="section">
+      <span class="from" *ngIf="character?.origin">
+        From: {{ character.origin.name }}
+      </span>
+    </div>
+    <div class="section">
+      <span class="location" *ngIf="character?.location">
+        Last seen: {{ character.location.name }}
+      </span>
+    </div>
+    <div class="section">
+      <span class="episodes" *ngIf="character?.episode"
+        >Appears in {{ character.episode.length }} episodes</span
+      >
+    </div>
+  </div>
+</div>
+
+<app-seasons [seasons]="seasons"></app-seasons>

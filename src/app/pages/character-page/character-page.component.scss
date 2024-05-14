@@ -1,0 +1,78 @@
+.character-container {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: stretch;
+  padding: 1em 3em;
+}
+
+.image-container {
+  padding: 1em;
+  margin-top: 40px;
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1em;
+  gap: 1em;
+  margin-top: 40px;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.status {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: baseline;
+  text-transform: capitalize;
+  font-size: 1.5em;
+
+  span {
+    height: 0.75rem;
+    width: 0.75rem;
+    margin-right: 0.375rem;
+    border-radius: 50%;
+
+    &.dead {
+      background: rgb(214, 61, 46);
+    }
+    &.alive {
+      background: rgb(85, 204, 68);
+    }
+    &.unknown {
+      background: rgb(158, 158, 158);
+    }
+  }
+}
+
+.gender,
+.from,
+.location {
+  font-size: 1.2em;
+}
+
+.episodes-container {
+  padding: 2em;
+}
+
+tr {
+  cursor: pointer;
+}
+
+@media (max-width: 40.625em) {
+  .character-container {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .character-info {
+    padding: 1em;
+  }
+}

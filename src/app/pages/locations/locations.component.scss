@@ -1,0 +1,30 @@
+.locations-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 7em;
+  margin-top: 15px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+
+.page-item:not(.disabled) {
+  cursor: pointer;
+}
+
+.header{
+  display: block;
+}

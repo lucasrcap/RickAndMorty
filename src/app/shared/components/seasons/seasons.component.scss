@@ -1,0 +1,19 @@
+.seasons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .season {
+    padding: 1em;
+    width: 40%;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .episodes-table tr {
+    cursor: pointer;
+  }
+}
